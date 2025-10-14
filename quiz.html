@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Quiz Battle</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .quiz-wrap{max-width:720px;margin:28px auto;padding:20px;background:var(--card);border-radius:12px}
+    .question{font-size:20px;margin-bottom:12px}
+    .answers{display:flex;flex-direction:column;gap:10px}
+    .answer{padding:12px;border-radius:10px;background:rgba(255,255,255,0.03);cursor:pointer}
+    .answer.correct{background:linear-gradient(90deg,#00ffb1,#4dffa6);color:#021}
+    .answer.wrong{background:linear-gradient(90deg,#ff8a8a,#ff4d4d);color:#210}
+    .meta{display:flex;justify-content:space-between;color:var(--muted);margin-top:12px}
+  </style>
+</head>
+<body>
+  <header class="site-header"><div class="container"><h1>Quiz Battle</h1></div></header>
+
+  <main class="container">
+    <div class="quiz-wrap">
+      <div class="meta"><div>Въпрос: <span id="qNo">0</span>/<span id="qTotal">0</span></div><div>Време: <span id="qTime">12</span>s</div></div>
+      <div class="question" id="question">Зареждане...</div>
+      <div class="answers" id="answers"></div>
+      <div style="text-align:center;margin-top:12px">
+        <a class="btn" href="index.html">← Назад</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

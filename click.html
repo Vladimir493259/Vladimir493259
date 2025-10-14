@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Click Storm</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* специфични стилове за тази страница */
+    .game-wrap{max-width:880px;margin:30px auto;padding:18px;background:var(--card);border-radius:12px}
+    .score{font-size:48px;font-weight:800;color:var(--accent);text-align:center;margin:10px 0}
+    .controls{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .big-btn{padding:28px 38px;border-radius:14px;font-size:20px;background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;cursor:pointer}
+    .info{color:var(--muted);text-align:center;margin-top:12px}
+    .power-list{display:flex;gap:12px;justify-content:center;margin-top:12px}
+    .power{background:var(--glass);padding:8px;border-radius:10px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header class="site-header"><div class="container"><h1>Click Storm</h1></div></header>
+
+  <main class="container">
+    <div class="game-wrap">
+      <div class="score" id="score">0</div>
+      <div style="text-align:center;color:var(--muted)">Време остава: <span id="timeLeft">15</span>s</div>
+
+      <div class="controls" style="margin-top:18px">
+        <button id="clickBtn" class="big-btn">КЛИК!</button>
+        <button id="boostBtn" class="btn">+Click Boost (x2) — цена 20</button>
+        <button id="timeBtn" class="btn">+Time +5s — цена 30</button>
+      </div>
+
+      <div class="power-list" id="powers"></div>
+      <div class="info">Рекорд: <span id="best">0</span> | Кликове/сек (примерно): <span id="rate">0</span></div>
+      <div style="text-align:center;margin-top:12px">
+        <a class="btn" href="index.html">← Назад към портала</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="click.js"></script>
+</body>
+</html>

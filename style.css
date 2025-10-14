@@ -1,0 +1,32 @@
+:root{
+  --bg1: #071426;
+  --card: linear-gradient(180deg,#071426,#0b2336);
+  --accent: #00e6ff;
+  --muted: #9fb3c8;
+  --glass: rgba(255,255,255,0.03);
+  --radius: 12px;
+  --container: 1100px;
+  --accent-2: #7c5cff;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,var(--bg1),#07101a);color:#e6eef6}
+.container{max-width:var(--container);margin:0 auto;padding:28px}
+.site-header{padding:28px 0;text-align:center}
+.site-header h1{font-size:34px;color:var(--accent);text-shadow:0 4px 20px rgba(0,230,255,0.06)}
+.subtitle{color:var(--muted);margin-top:6px}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;padding:20px}
+.game-card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+.game-card h2{margin-top:0;color:var(--accent-2)}
+.game-card p{color:var(--muted)}
+.btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent-2),var(--accent));color:#07101a;font-weight:800;text-decoration:none}
+.footer{display:flex;justify-content:space-between;align-items:center;color:var(--muted);padding:18px 0;border-top:1px solid rgba(255,255,255,0.02)}
+.small{font-size:13px}
+
+/* Page specific helpers */
+.center-screen{min-height:70vh;display:flex;align-items:center;justify-content:center}
+/* Simple responsive */
+@media (max-width:720px){
+  .container{padding:16px}
+  .site-header h1{font-size:26px}
+  .grid-3{gap:12px}
+}

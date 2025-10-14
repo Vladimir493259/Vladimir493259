@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dodge Cubes</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .game-wrap{max-width:900px;margin:28px auto;padding:16px;background:var(--card);border-radius:12px}
+    canvas{background:linear-gradient(180deg,#071426,#042033);display:block;margin:0 auto;border-radius:8px}
+    .hud{display:flex;justify-content:space-between;color:var(--muted);padding:10px 18px}
+    .controls{display:flex;gap:8px;justify-content:center;margin-top:12px}
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header class="site-header"><div class="container"><h1>Dodge Cubes</h1></div></header>
+
+  <main class="container">
+    <div class="game-wrap">
+      <div class="hud">
+        <div>Точки: <span id="dscore">0</span></div>
+        <div>Ниво: <span id="level">1</span></div>
+        <div>Най-добро: <span id="dbest">0</span></div>
+      </div>
+      <canvas id="gameCanvas" width="760" height="420"></canvas>
+      <div class="controls">
+        <button id="left" class="btn">◀️</button>
+        <button id="up" class="btn">▲</button>
+        <button id="down" class="btn">▼</button>
+        <button id="right" class="btn">▶️</button>
+        <button id="restart" class="btn">Рестарт</button>
+      </div>
+      <div style="text-align:center;margin-top:8px" class="small">Управление: стрелки от клавиатурата или бутоните. Избягвай падащите квадрати!</div>
+      <div style="text-align:center;margin-top:12px"><a class="btn" href="index.html">← Назад</a></div>
+    </div>
+  </main>
+
+  <script src="dodge.js"></script>
+</body>
+</html>
